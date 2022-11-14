@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parking", "Parking\Parking.csproj", "{36FDB436-5F72-4542-BD25-A197AEF31F6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parking.Domain", "Parking.Domain\Parking.Domain.csproj", "{1DB34225-6C52-4D59-A26A-34525BEE4FEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parking.PresentationLogic", "Parking.PresentationLogic\Parking.PresentationLogic.csproj", "{4D33FB18-0CBA-4508-8E41-CAD849E905C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parking.InMemoryDataAccess", "Parking.InMemoryDataAccess\Parking.InMemoryDataAccess.csproj", "{0D0ED12F-7F64-4C37-8CF3-D0893A730B32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36FDB436-5F72-4542-BD25-A197AEF31F6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36FDB436-5F72-4542-BD25-A197AEF31F6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36FDB436-5F72-4542-BD25-A197AEF31F6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36FDB436-5F72-4542-BD25-A197AEF31F6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DB34225-6C52-4D59-A26A-34525BEE4FEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DB34225-6C52-4D59-A26A-34525BEE4FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DB34225-6C52-4D59-A26A-34525BEE4FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DB34225-6C52-4D59-A26A-34525BEE4FEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D33FB18-0CBA-4508-8E41-CAD849E905C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D33FB18-0CBA-4508-8E41-CAD849E905C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D33FB18-0CBA-4508-8E41-CAD849E905C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D33FB18-0CBA-4508-8E41-CAD849E905C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D0ED12F-7F64-4C37-8CF3-D0893A730B32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D0ED12F-7F64-4C37-8CF3-D0893A730B32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D0ED12F-7F64-4C37-8CF3-D0893A730B32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D0ED12F-7F64-4C37-8CF3-D0893A730B32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4FF88C3D-4913-4CFC-ADED-51D53CCE6584}
+	EndGlobalSection
+EndGlobal
