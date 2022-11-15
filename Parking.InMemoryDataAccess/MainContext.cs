@@ -24,10 +24,10 @@ namespace Parking.InMemoryDataAccess
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ParkingSpace>().HasData(new ParkingSpace { Id = 1, Address = "Street 1, 55" });
-            modelBuilder.Entity<ParkingSpace>().HasData(new ParkingSpace { Id = 2, Address = "Street 2, 5" });
-            modelBuilder.Entity<ParkingSpace>().HasData(new ParkingSpace { Id = 3, Address = "Street 3, 10" });
-            modelBuilder.Entity<ParkingSpace>().HasData(new ParkingSpace { Id = 4, Address = "Street 4, 123" });
+            modelBuilder.Entity<ParkingSpace>().HasData(new ParkingSpace { Id = 1, Address = "Yasmin St 334" });
+            modelBuilder.Entity<ParkingSpace>().HasData(new ParkingSpace { Id = 2, Address = "Hovevei Tsiyon St 324" });
+            modelBuilder.Entity<ParkingSpace>().HasData(new ParkingSpace { Id = 3, Address = "Tsvi Bornstein St 1" });
+            modelBuilder.Entity<ParkingSpace>().HasData(new ParkingSpace { Id = 4, Address = "Elkahayel 171" });
         }
     }
 }

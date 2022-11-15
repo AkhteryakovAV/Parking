@@ -1,0 +1,28 @@
+﻿<Window x:Class="Parking.Views.EditParkingView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Parking.Views"
+        mc:Ignorable="d"
+        xmlns:vm="clr-namespace:Parking.PresentationLogic.ViewModels;assembly=Parking.PresentationLogic"
+        d:DataContext="{d:DesignInstance Type=vm:EditParkingViewModel, IsDesignTimeCreatable=False}"
+        Title="Edit Parking" SizeToContent="Height" Width="500" 
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" Icon="{DynamicResource parking}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Binding ParkingId, StringFormat='ID: {0}'}" 
+                   FontWeight="Bold"
+                   Grid.ColumnSpan="2" />
+        <TextBlock Grid.Row="1" Text="Address:"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Address}"/>
+    </Grid>
+</Window>

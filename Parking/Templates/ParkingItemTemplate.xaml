@@ -1,11 +1,15 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converters="clr-namespace:Parking.Converters"
+                    >
+    <converters:StatusToTextCommandConverter x:Key="StatusToTextCommand"/>
+    
     <DataTemplate x:Key="ParkingTemplate">
-        <Border 
-                BorderThickness="1" 
+        <Border BorderThickness="1" 
                 BorderBrush="SteelBlue" 
-                CornerRadius="4">
+                CornerRadius="4"
+                Margin="2"
+                >
             <Grid Margin="3">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -18,25 +22,62 @@
 
                 <TextBlock FontWeight="Bold" 
                            Text="{Binding Path=Id, StringFormat=ID: {0:d}}"
-                           Margin="0,0,10,0"/>
+                           Margin="0,0,10,0"
+                           />
                 <TextBlock Text="{Binding Path=Address}"
                            Grid.Column="1"
                            />
                 <DockPanel Grid.Row="1" Grid.ColumnSpan="2"
                            LastChildFill="True"
                            >
-                    <Button Content="{Binding Status}"
+                    <Button x:Name="btnDelete" 
+                            Content="Delete"
+                            Visibility="Hidden"
                             DockPanel.Dock="Right"
-                            Command="{Binding Path=DataContext.ChangeStatusCommand, RelativeSource={RelativeSource AncestorType=Window} }"/>
-                    <Button Content="Edit" 
+                            Command="{Binding Path=DataContext.DeleteCommand, RelativeSource={RelativeSource AncestorType=Window} }"
+                            CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=ListViewItem}, Path=DataContext}"
+                            />
+                    <Button x:Name="btnEdit" 
+                            Visibility="Hidden"
+                            Content="Edit" 
                             DockPanel.Dock="Right"
-                            Command="{Binding Path=DataContext.EditCommand, RelativeSource={RelativeSource AncestorType=Window} }"/>
-                    <TextBlock Text="{Binding Path=Id, StringFormat=Usages: {0:d3}}" 
+                            Command="{Binding Path=DataContext.EditCommand, RelativeSource={RelativeSource AncestorType=Window} }"
+                            CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=ListViewItem}, Path=DataContext}"
+                            />
+                    <Button x:Name="btnChangeStatus" 
+                            Visibility="Hidden"
+                            Content="{Binding Status, Converter={StaticResource StatusToTextCommand}}"
+                            DockPanel.Dock="Right"
+                            Command="{Binding Path=DataContext.ChangeStatusCommand, RelativeSource={RelativeSource AncestorType=Window} }"
+                            CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=ListViewItem}, Path=DataContext}"
+                            />
+                    
+                    <TextBlock Text="{Binding Path=Usages, StringFormat=Usages: {0:d3}, Mode=OneWay}" 
                                DockPanel.Dock="Left"
                                VerticalAlignment="Center"
                                />
                 </DockPanel>
             </Grid>
         </Border>
+
+        <DataTemplate.Triggers>
+            <DataTrigger
+                Binding="{Binding
+                    RelativeSource={RelativeSource
+                        Mode=FindAncestor,
+                        AncestorType={x:Type ListBoxItem}},
+                        Path=IsMouseOver}"
+                Value="True">
+                <Setter TargetName="btnDelete"
+                        Property="Visibility"
+                        Value="Visible"/>
+                <Setter TargetName="btnEdit"
+                        Property="Visibility"
+                        Value="Visible"/>
+                <Setter TargetName="btnChangeStatus"
+                        Property="Visibility"
+                        Value="Visible"/>
+            </DataTrigger>
+        </DataTemplate.Triggers>
     </DataTemplate>
 </ResourceDictionary>

@@ -56,6 +56,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\StatusToTextCommandConverter.cs" />
+    <Compile Include="Views\AddParkingView.xaml.cs">
+      <DependentUpon>AddParkingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditParkingView.xaml.cs">
+      <DependentUpon>EditParkingView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Icons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -69,6 +80,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Templates\ParkingItemTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddParkingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EditParkingView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

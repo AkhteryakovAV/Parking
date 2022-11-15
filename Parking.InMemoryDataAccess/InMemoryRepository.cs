@@ -41,5 +41,11 @@ namespace Parking.InMemoryDataAccess
             TModel entity = entities.Find(id) ?? throw new KeyNotFoundException(nameof(id));
             return entity;
         }
+
+        public void Update(TModel entity)
+        {
+            _ = context.Update(entity);
+            _ = context.SaveChanges();
+        }
     }
 }
