@@ -22,7 +22,6 @@
 
                 <TextBlock FontWeight="Bold" 
                            Text="{Binding Path=Id, StringFormat=ID: {0:d}}"
-                           Margin="0,0,10,0"
                            />
                 <TextBlock Text="{Binding Path=Address}"
                            Grid.Column="1"
