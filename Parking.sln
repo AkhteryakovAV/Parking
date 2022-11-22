@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parking.PresentationLogic",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parking.InMemoryDataAccess", "Parking.InMemoryDataAccess\Parking.InMemoryDataAccess.csproj", "{0D0ED12F-7F64-4C37-8CF3-D0893A730B32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parking.Website", "Parking.Website\Parking.Website.csproj", "{46B4693D-3242-4174-988A-5CC1F8EDEACD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0D0ED12F-7F64-4C37-8CF3-D0893A730B32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D0ED12F-7F64-4C37-8CF3-D0893A730B32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D0ED12F-7F64-4C37-8CF3-D0893A730B32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B4693D-3242-4174-988A-5CC1F8EDEACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B4693D-3242-4174-988A-5CC1F8EDEACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B4693D-3242-4174-988A-5CC1F8EDEACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B4693D-3242-4174-988A-5CC1F8EDEACD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

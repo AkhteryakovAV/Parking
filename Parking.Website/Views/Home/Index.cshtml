@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Parking.Domain.Models.ParkingSpace>
+@{
+    ViewBag.Title = "Parking";
+}
+<table class="table">
+    <tr><td>Address</td><td>Status</td><td>Usages</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.Address</td><td>@item.Status</td><td>@item.Usages</td></tr>
+    }
+</table>
